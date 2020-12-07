@@ -1,0 +1,102 @@
+  //     switch (keyCode) {
+                    //         case 37:
+                    //             clearInterval(timer)
+                    //             timer = setInterval(function () {
+                    //                 x0 -= num
+                    //                 // ctx.clearRect(x0,y0,everyImgWidth, everyImgHeight);
+                    //                 ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+                    //                 ctx.drawImage(
+                    //                     // 图片DOM对象
+                    //                     img,
+                    //                     // 开始裁剪的坐标位置
+                    //                     everyImgWidth * index, everyImgHeight,
+                    //                     // 裁剪图片的宽度高度
+                    //                     everyImgWidth, everyImgHeight,
+                    //                     // 图片出现在画布上的坐标
+                    //                     x0, y0,
+                    //                     // 图片的宽度高度,允许缩放
+                    //                     everyImgWidth, everyImgHeight
+                    //                 );
+                    //                 console.log(index)
+                    //                 index++;
+                    //                 if (index > 3) {
+                    //                     index = 0;
+                    //                 }
+                    //             }, 200)
+                    //             break;
+                    //         case 38:
+                    //             clearInterval(timer)
+
+                    //             timer = setInterval(function () {
+                    //                 y0 -= num
+                    //                 // ctx.clearRect(x0,y0,everyImgWidth, everyImgHeight);
+                    //                 ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+                    //                 ctx.drawImage(
+                    //                     // 图片DOM对象
+                    //                     img,
+                    //                     // 开始裁剪的坐标位置
+                    //                     everyImgWidth * index, everyImgHeight * 3,
+                    //                     // 裁剪图片的宽度高度
+                    //                     everyImgWidth, everyImgHeight,
+                    //                     // 图片出现在画布上的坐标
+                    //                     x0, y0,
+                    //                     // 图片的宽度高度,允许缩放
+                    //                     everyImgWidth, everyImgHeight
+                    //                 );
+                    //                 index++;
+                    //                 if (index > 3) {
+                    //                     index = 0;
+                    //                 }
+                    //             }, 200)
+                    //             break;
+                    //         case 39:
+                    //             clearInterval(timer)
+
+                    //             timer = setInterval(function () {
+                    //                 x0 += num
+                    //                 // ctx.clearRect(x0,y0,everyImgWidth, everyImgHeight);
+                    //                 ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+                    //                 ctx.drawImage(
+                    //                     // 图片DOM对象
+                    //                     img,
+                    //                     // 开始裁剪的坐标位置
+                    //                     everyImgWidth * index, everyImgHeight * 2,
+                    //                     // 裁剪图片的宽度高度
+                    //                     everyImgWidth, everyImgHeight,
+                    //                     // 图片出现在画布上的坐标
+                    //                     x0, y0,
+                    //                     // 图片的宽度高度,允许缩放
+                    //                     everyImgWidth, everyImgHeight
+                    //                 );
+                    //                 index++;
+                    //                 if (index > 3) {
+                    //                     index = 0;
+                    //                 }
+                    //             }, 200)
+                    //             break;
+                    //         case 40:
+                    //             clearInterval(timer)
+
+                    //             timer = setInterval(function () {
+                    //                 y0 += num
+                    //                 // ctx.clearRect(x0,y0,everyImgWidth, everyImgHeight);
+                    //                 ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+                    //                 ctx.drawImage(
+                    //                     // 图片DOM对象
+                    //                     img,
+                    //                     // 开始裁剪的坐标位置
+                    //                     everyImgWidth * index, everyImgHeight*0,
+                    //                     // 裁剪图片的宽度高度
+                    //                     everyImgWidth, everyImgHeight,
+                    //                     // 图片出现在画布上的坐标
+                    //                     x0, y0,
+                    //                     // 图片的宽度高度,允许缩放
+                    //                     everyImgWidth, everyImgHeight
+                    //                 );
+                    //                 index++;
+                    //                 if (index > 3) {
+                    //                     index = 0;
+                    //                 }
+                    //             }, 200)
+                    //             break;
+                    //     }

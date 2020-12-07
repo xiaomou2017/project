@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas width='600' height='400'></canvas>
+
+    <script>
+        var mycanvas = document.querySelector('canvas')
+        var ctx = mycanvas.getContext('2d')
+
+        var canvasWidth = ctx.canvas.width;
+        var canvasHeight = ctx.canvas.height;
+
+        var img = new Image();
+        img.onload = function () {
+            //获取图片的狂赌
+            var imgWidth = img.width;
+            // 获取图片的高度
+            var imgHeight = img.height;
+            // 每个图片的宽度
+            var everyImgWidth = imgWidth / 4;
+            // 每个图片的高度
+            var everyImgHeight = imgHeight / 4;
+
+            // 我们想把图片放在画布的中心
+            var x0 = canvasWidth / 2 - everyImgWidth / 2;
+            var y0 = canvasHeight / 2 - everyImgHeight / 2;
+            var index = 0;
+            var num = 10
+
+            var timer = null
+            var sj = null;
+
+            document.onkeydown = function (event) {
+                var eH = 0
+                var e = event || window.event;
+                var keyCode = e.keyCode || e.which
+                console.log(keyCode)
+                // clearTimeout(sj)
+                // sj = setTimeout(function () {
+                clearInterval(timer)
+                if (keyCode == 37) {
+                        x0 -= num
+                        eH = 1
+                        // console.log('左')
+
+                } else if (keyCode == 38) {
+                    y0 -= num
+                    eH = 3
+                    console.log('上')
+                    console.log(index)
+                } else if (keyCode == 39) {
+                    x0 += num9
+                    eH = 2
+                    console.log('右')
+                    console.log(index)
+                } else if (keyCode == 40) {
+                    y0 += num
+                    eH = 0
+                    console.log('下')
+                    console.log(index)
+                }
+                ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+                ctx.drawImage(
+                    // 图片DOM对象
+                    img,
+                    // 开始裁剪的坐标位置
+                    everyImgWidth * index, everyImgHeight * eH,
+                    // 裁剪图片的宽度高度
+                    everyImgWidth, everyImgHeight,
+                    // 图片出现在画布上的坐标
+                    x0, y0,
+                    // 图片的宽度高度,允许缩放
+                    everyImgWidth, everyImgHeight
+                );
+
+                index++;
+                if (index > 3) {
+                    index = 0;
+                }
+
+                // }, 100)
+            }
+
+
+            // 默认面朝下
+            ctx.clearRect(x0, y0, everyImgWidth, everyImgHeight);
+            ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+            ctx.drawImage(
+                // 图片DOM对象
+                img,
+                // 开始裁剪的坐标位置
+                everyImgWidth * index, 0,
+                // 裁剪图片的宽度高度
+                everyImgWidth, everyImgHeight,
+                // 图片出现在画布上的坐标
+                x0, y0,
+                // 图片的宽度高度,允许缩放
+                everyImgWidth, everyImgHeight
+            );
+
+        }
+
+
+        img.src = './NPCrabbitbaby.png'
+    </script>
+
+</body>
+
+</html>
